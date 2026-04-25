@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    font-family: "Inter", "Open Sans", sans-serif;
+    scroll-behavior: smooth;
+  }
+}
