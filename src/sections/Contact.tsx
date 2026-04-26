@@ -8,19 +8,19 @@ const contactInfo = [
   {
     icon: <HiOutlineEnvelope className="w-6 h-6" />,
     title: "Email",
-    info: "sulivan7@gmail.com",
-    href: "mailto:sulivan7@gmail.com",
+    info: "devsulivan@gmail.com",
+    href: "https://mail.google.com/mail/?view=cm&to=devsulivan@gmail.com",
   },
   {
     icon: <FiLinkedin className="w-6 h-6" />,
     title: "LinkedIn",
-    info: "@sulivan7",
-    href: "https://www.linkedin.com/in/sulivan7",
+    info: "Sulivan Prenholato",
+    href: "https://www.linkedin.com/in/sulivan-prenholato-b18667328/",
   },
   {
     icon: <HiOutlineMapPin className="w-6 h-6" />,
     title: "Localização",
-    info: "São Paulo, SP",
+    info: "Rio das Ostras, RJ",
   },
 ];
 
@@ -49,7 +49,8 @@ const Contact = () => {
           <Button
             text="Enviar Mensagem"
             variant="primary"
-            href="mailto:sulivan7@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&to=devsulivan@gmail.com"
+            target="_black"
           />
         </div>
       </div>

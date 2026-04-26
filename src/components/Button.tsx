@@ -5,6 +5,7 @@ type ButtonProps = {
   variant?: "primary" | "secondary";
   size?: "sm" | "md" | "lg";
   type?: "button" | "submit" | "reset";
+  target?: string;
 };
 
 const baseClasses = "rounded-sm font-medium transition-colors cursor-pointer";
@@ -31,12 +32,18 @@ const Button = ({
   onClick,
   size = "md",
   type = "button",
+  target,
 }: ButtonProps) => {
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]}`;
 
   if (href) {
     return (
-      <a href={href} className={classes}>
+      <a
+        href={href}
+        className={classes}
+        target={target}
+        rel={target === "_blank" ? "noopener noreferrer" : undefined}
+      >
         {text}
       </a>
     );
