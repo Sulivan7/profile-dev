@@ -6,10 +6,10 @@ import { useTheme } from "../hooks/useTheme";
 import Button from "./Button";
 
 const navLinks = [
-  { name: "Home", href: "#" },
-  { name: "About", href: "#" },
-  { name: "Projects", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Inicio", href: "#hero" },
+  { name: "Sobre", href: "#about" },
+  { name: "Projetos", href: "#projects" },
+  { name: "Contato", href: "#contact" },
 ];
 
 const Header = () => {
@@ -19,12 +19,12 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 py-4 transition-all bg-white dark:bg-slate-900 ${scrolled ? "border-b border-slate-200 dark:border-slate-700" : ""}`}
+      className={`sticky top-0 z-50 py-5 transition-all bg-white dark:bg-slate-900 ${scrolled ? "border-b border-slate-200 dark:border-slate-700" : ""}`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a
           className="text-xl font-semibold text-slate-900 dark:text-white"
-          href="#"
+          href="#home"
         >
           Sulivan Dev
         </a>
@@ -46,7 +46,13 @@ const Header = () => {
 
         <div className="flex items-center gap-6">
           <div className="hidden md:block">
-            <Button text="Currículo" variant="primary" size="sm" href="#" />
+            <Button
+              text="Currículo"
+              variant="primary"
+              size="sm"
+              href="/curriculoDev.pdf"
+              target="_blank"
+            />
           </div>
 
           {theme === "light" ? (
@@ -93,7 +99,13 @@ const Header = () => {
               </li>
             ))}
             <div className="mt-4 px-3">
-              <Button text="Currículo" variant="primary" size="sm" href="#" />
+              <Button
+                text="Currículo"
+                variant="primary"
+                size="sm"
+                href="/curriculoDev.pdf"
+                target="_blank"
+              />
             </div>
           </ul>
         </nav>
