@@ -1,28 +1,10 @@
 @import "tailwindcss";
 
-:root {
-  --color-background: #020617;
-  --color-foreground: #f8fafc;
-  --color-subtext: #94a3b8;
-  --color-primary: #1787f0;
-  --color-secondary: #0f172a;
-
-  --font-family-sans: "Inter", "Open Sans", sans-serif;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
   html {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-    font-family: var(--font-family-sans);
+    font-family: "Inter", "Open Sans", sans-serif;
     scroll-behavior: smooth;
-  }
-
-  html.light {
-    --color-background: #f8fafc;
-    --color-foreground: #0f172a;
-    --color-subtext: #64748b;
-    --color-primary: #1787f0;
-    --color-secondary: #e2e8f0;
   }
 }
