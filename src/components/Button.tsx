@@ -11,11 +11,11 @@ const baseClasses = "rounded-sm font-medium transition-colors cursor-pointer";
 
 const variantClasses = {
   primary:
-    "bg-blue-900 text-white hover:bg-blue-600 " +
-    "dark:bg-blue-400 dark:text-gray-900 dark:hover:bg-blue-500",
+    "bg-blue-900 text-white hover:bg-blue-700 " +
+    "dark:bg-blue-500 dark:text-white dark:hover:bg-blue-400",
   secondary:
-    "border border-slate-600 text-blue-900 hover:border-blue-600 " +
-    "dark:border-blue-400 dark:text-gray-900 dark:hover:border-blue-500",
+    "border border-slate-300 text-slate-700 hover:border-blue-600 hover:text-blue-600 " +
+    "dark:border-slate-500 dark:text-slate-200 dark:hover:border-blue-400 dark:hover:text-blue-400",
 };
 
 const sizeClasses = {

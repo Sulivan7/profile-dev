@@ -1,10 +1,5 @@
 import { useState } from "react";
-import {
-  MoonIcon,
-  SunIcon,
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/16/solid";
+import { HiMoon, HiSun, HiBars3, HiXMark } from "react-icons/hi2";
 
 import { useScroll } from "../hooks/useScroll";
 import { useTheme } from "../hooks/useTheme";
@@ -55,12 +50,12 @@ const Header = () => {
           </div>
 
           {theme === "light" ? (
-            <SunIcon
+            <HiSun
               className="w-6 h-6 text-slate-600 hover:text-slate-900 cursor-pointer transition-colors"
               onClick={toggle}
             />
           ) : (
-            <MoonIcon
+            <HiMoon
               className="w-6 h-6 text-slate-300 hover:text-white cursor-pointer transition-colors"
               onClick={toggle}
             />
@@ -71,9 +66,9 @@ const Header = () => {
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? (
-              <XMarkIcon className="w-6 h-6" />
+              <HiXMark className="w-6 h-6" />
             ) : (
-              <Bars3Icon className="w-6 h-6" />
+              <HiBars3 className="w-6 h-6" />
             )}
           </button>
         </div>
