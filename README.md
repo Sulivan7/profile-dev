@@ -18,7 +18,7 @@
   <img src="./public/previewReadme.png" alt="Preview do portfólio" width="100%" />
 </p>
 
-<!--🔗 **Acesse online:** (https:) --> 
+🔗 **Acesse online:** ([https:profile-dev-inky.vercel.app](https://profile-dev-inky.vercel.app/))
 
 ---
 
@@ -71,15 +71,15 @@ Acesse [http://localhost:5173](http://localhost:5173) no seu navegador.
 
 ```bash
 src/
-├── assets/ 
-├── components/ 
-├── data/ 
-├── hooks/ 
+├── assets/
+├── components/
+├── data/
+├── hooks/
 ├── pages/
-├── sections/ 
-├── types/ 
-├── App.tsx 
-└── main.tsx 
+├── sections/
+├── types/
+├── App.tsx
+└── main.tsx
 ```
 
 ---
