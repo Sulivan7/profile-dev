@@ -10,17 +10,18 @@ export const skills: Skill[] = [
     icon: HiOutlineCodeBracket,
     title: "Código Limpo",
     description:
-      "Escrevo código que é fácil de ler, entender e manter, seguindo as melhores práticas da indústria.",
+      "Gosto de escrever código que eu mesmo vou entender daqui 6 meses e que qualquer dev também consiga.",
   },
   {
     icon: HiOutlineEye,
     title: "Design Focado",
-    description: "Atenção aos detalhes e experiência do usuário em cada pixel.",
+    description:
+      "Se o usuário precisa pensar pra usar, algo deu errado. Busco interfaces que façam sentido no primeiro clique.",
   },
   {
     icon: HiOutlineBolt,
     title: "Performance",
     description:
-      "Otimização constante para entregar aplicações rápidas e eficientes.",
+      "Ninguém gosta de esperar página carregar. Otimizo o que dá pra entregar uma experiência fluida.",
   },
 ];

@@ -15,7 +15,7 @@ const Hero = () => {
         <h1 className="text-5xl font-bold leading-tight text-slate-900 dark:text-white">
           Desenvolvedor
           <br />
-          <span className="text-slate-500 dark:text-slate-400">Full Stack</span>
+          <span className="text-slate-500 dark:text-slate-400">Front-end</span>
         </h1>
 
         <p className="text-slate-500 dark:text-slate-400 max-w-lg text-base">
