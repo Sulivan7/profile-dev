@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
+import { projects } from "../data/projects";
 import TitleSection from "../components/TitleSection";
 import CardProjects from "../components/CardProject";
-import { projects } from "../data/projects";
 
-const PREVIEW_COUNT = 3;
+const previewCount = 3;
 
 const Projects = () => {
   return (
@@ -15,7 +15,7 @@ const Projects = () => {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {projects.slice(0, PREVIEW_COUNT).map((project) => (
+          {projects.slice(0, previewCount).map((project) => (
             <CardProjects key={project.title} {...project} />
           ))}
         </div>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { HiOutlineArrowLeft } from "react-icons/hi2";
-import CardProjects from "../components/CardProject";
 import { projects } from "../data/projects";
+import CardProjects from "../components/CardProject";
 
 const AllProjects = () => {
   return (

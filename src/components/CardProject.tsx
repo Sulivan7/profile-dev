@@ -29,22 +29,12 @@ const ProjectCard = ({
           </h3>
           <div className="flex gap-3">
             {githubLink && (
-              <a
-                href={githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Ver código do ${title} no GitHub`}
-              >
+              <a href={githubLink} target="_blank" rel="noopener noreferrer">
                 <HiOutlineCodeBracketSquare className="w-5 h-5 text-slate-400 hover:text-blue-600 dark:text-slate-500 dark:hover:text-blue-400 transition-colors" />
               </a>
             )}
             {liveLink && (
-              <a
-                href={liveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Ver demo ao vivo do ${title}`}
-              >
+              <a href={liveLink} target="_blank" rel="noopener noreferrer">
                 <HiOutlineArrowTopRightOnSquare className="w-5 h-5 text-slate-400 hover:text-blue-600 dark:text-slate-500 dark:hover:text-blue-400 transition-colors" />
               </a>
             )}
