@@ -1,8 +1,13 @@
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import AllProjects from "./pages/AllProjects";
+
 function App() {
   return (
-    <>
-      <h1>Sulivan.Dev</h1>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/projetos" element={<AllProjects />} />
+    </Routes>
   );
 }
 
