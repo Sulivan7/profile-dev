@@ -2,17 +2,17 @@ import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 const socialLinks = [
   {
-    href: "https://github.com/sulivan7",
+    href: "https://github.com/Sulivan7",
     label: "Perfil no GitHub",
     icon: <FiGithub className="w-5 h-5" />,
   },
   {
-    href: "https://www.linkedin.com/in/sulivan7",
+    href: "https://www.linkedin.com/in/sulivan-prenholato-b18667328/",
     label: "Perfil no LinkedIn",
     icon: <FiLinkedin className="w-5 h-5" />,
   },
   {
-    href: "mailto:sulivan7@example.com",
+    href: "mailto:devsulivan@gmail.com",
     label: "Enviar email",
     icon: <FiMail className="w-5 h-5" />,
   },
