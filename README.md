@@ -1,4 +1,4 @@
-<h1 align="center">Sulivan Dev</h1>
+<h1 align="center">Profile Dev</h1>
 
 <p align="center">
   Portfólio pessoal desenvolvido com React, TypeScript e Tailwind CSS.<br />
