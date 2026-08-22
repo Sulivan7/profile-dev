@@ -5,7 +5,7 @@ type ButtonProps = {
   variant?: "primary" | "secondary";
   size?: "sm" | "md" | "lg";
   type?: "button" | "submit" | "reset";
-  target?: string;
+  target?: "_blank" | "_self";
 };
 
 const baseClasses = "rounded-sm font-medium transition-colors cursor-pointer";
