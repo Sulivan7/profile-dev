@@ -50,7 +50,7 @@ const Contact = () => {
             text="Enviar Mensagem"
             variant="primary"
             href="https://mail.google.com/mail/?view=cm&to=devsulivan@gmail.com"
-            target="_black"
+            target="_blank"
           />
         </div>
       </div>
