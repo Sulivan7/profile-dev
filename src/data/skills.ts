@@ -1,27 +1,27 @@
 import {
-  HiOutlineCodeBracket,
-  HiOutlineEye,
-  HiOutlineBolt,
+  HiOutlineAcademicCap,
+  HiOutlineBriefcase,
+  HiOutlineArrowTrendingUp,
 } from "react-icons/hi2";
 import type { Skill } from "../types";
 
 export const skills: Skill[] = [
   {
-    icon: HiOutlineCodeBracket,
-    title: "Código Limpo",
+    icon: HiOutlineAcademicCap,
+    title: "Formação",
     description:
-      "Gosto de escrever código que eu mesmo vou entender daqui 6 meses e que qualquer dev também consiga.",
+      "Tecnólogo em Análise e Desenvolvimento de Sistemas pela Estácio, com o curso de Engenharia Front-end da EBAC concluído. Hoje curso Ciência da Computação.",
   },
   {
-    icon: HiOutlineEye,
-    title: "Design Focado",
+    icon: HiOutlineBriefcase,
+    title: "Trabalho e estudo",
     description:
-      "Se o usuário precisa pensar pra usar, algo deu errado. Busco interfaces que façam sentido no primeiro clique.",
+      "Trabalho no comércio há quase cinco anos e estudo programação em paralelo. Foi assim que terminei um curso de dois anos e entreguei o site do dojô.",
   },
   {
-    icon: HiOutlineBolt,
-    title: "Performance",
+    icon: HiOutlineArrowTrendingUp,
+    title: "Estudando agora",
     description:
-      "Ninguém gosta de esperar página carregar. Otimizo o que dá pra entregar uma experiência fluida.",
+      "Consumo de APIs, Redux e testes automatizados, com o objetivo de evoluir para full stack.",
   },
 ];

@@ -7,7 +7,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <TitleSection
           title="Sobre Mim"
-          subtitle="Desenvolvedor com foco em front-end. Procuro construir soluções práticas, com código organizado e atenção à usabilidade."
+          subtitle="Vim do comércio e cheguei ao desenvolvimento estudando nas horas que sobravam."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
