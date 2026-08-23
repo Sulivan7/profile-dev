@@ -1,7 +1,4 @@
-import {
-  HiOutlineCodeBracketSquare,
-  HiOutlineArrowTopRightOnSquare,
-} from "react-icons/hi2";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
 import type { Project } from "../types";
 
 const ProjectCard = ({
@@ -24,19 +21,19 @@ const ProjectCard = ({
       </div>
 
       <div className="p-6">
-        <div className="flex items-center justify-between mb-3">
-          <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+        <div className="flex items-center justify-between gap-3 mb-3">
+          <h3 className="text-lg font-semibold leading-none text-slate-900 dark:text-white">
             {title}
           </h3>
-          <div className="flex gap-3">
+          <div className="flex items-center gap-3 shrink-0">
             {githubLink && (
               <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                <HiOutlineCodeBracketSquare className="w-5 h-5 text-slate-400 hover:text-blue-600 dark:text-slate-500 dark:hover:text-blue-400 transition-colors" />
+                <FiGithub className="block w-5 h-5 text-slate-400 hover:text-blue-600 dark:text-slate-500 dark:hover:text-blue-400 transition-colors" />
               </a>
             )}
             {liveLink && (
               <a href={liveLink} target="_blank" rel="noopener noreferrer">
-                <HiOutlineArrowTopRightOnSquare className="w-5 h-5 text-slate-400 hover:text-blue-600 dark:text-slate-500 dark:hover:text-blue-400 transition-colors" />
+                <FiExternalLink className="block w-5 h-5 text-slate-400 hover:text-blue-600 dark:text-slate-500 dark:hover:text-blue-400 transition-colors" />
               </a>
             )}
           </div>
