@@ -1,34 +1,34 @@
 import type { Project } from "../types";
-import projectPreviewImg from "../assets/images/projects-preview.jpg";
-import eplay from "../assets/images/eplay.png";
-import efood from "../assets/images/efood.png";
+import ironShotokan from "../assets/images/iron-shotokan.webp";
+import profileDev from "../assets/images/profile-dev.webp";
+import efood from "../assets/images/efood.webp";
 
 export const projects: Project[] = [
+  {
+    image: ironShotokan,
+    title: "Iron Shotokan Karate",
+    description:
+      "Site institucional feito para um dojô de karatê, a partir das necessidades trazidas pelo próprio dono.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
+    githubLink: "https://github.com/Sulivan7/dojo-isk",
+    liveLink: "https://dojo-isk.vercel.app/",
+  },
+  {
+    image: profileDev,
+    title: "Portfólio pessoal",
+    description:
+      "Este site. Componentes reutilizáveis, alternância entre tema claro e escuro e deploy automático na Vercel.",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    githubLink: "https://github.com/Sulivan7/profile-dev",
+    liveLink: "https://profile-dev-inky.vercel.app/",
+  },
   {
     image: efood,
     title: "E-food",
     description:
-      "Um aplicativo web moderno de delivery de comida, construído com React",
-    tags: ["React", "TypeScript", "Vite", "Styled Components"],
+      "Aplicação de delivery de comida, desenvolvida durante o curso de Engenharia Front-end da EBAC.",
+    tags: ["React", "TypeScript", "Vite"],
     githubLink: "https://github.com/Sulivan7/efood",
     liveLink: "https://efood-theta-indol.vercel.app/",
-  },
-  {
-    image: eplay,
-    title: "E-play",
-    description:
-      "Uma aplicação de e-commerce de jogos. Desenvolvida utilizando Jest para testes unitários",
-    tags: ["React", "TypeScript", "Redux Toolkit", "Jest"],
-    githubLink: "https://github.com/Sulivan7/ebac_games_redux",
-    liveLink: "https://eplay-gamma-gilt.vercel.app/",
-  },
-  {
-    image: projectPreviewImg,
-    title: "E-sports",
-    description:
-      "Uma aplicação de e-commerce esportivo moderna e responsiva. O projeto oferece carrinho de compras e sistema de favoritos.",
-    tags: ["React", "TypeScript", "Redux Toolkit", "Styled Components"],
-    githubLink: "https://github.com/Sulivan7/ebac_sports",
-    liveLink: "https://github.com/Sulivan7/ebac_sports",
   },
 ];
