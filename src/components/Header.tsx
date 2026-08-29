@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { HiMoon, HiSun, HiBars3, HiXMark } from "react-icons/hi2";
 
-import { useScroll } from "../hooks/useScroll";
-import { useTheme } from "../hooks/useTheme";
-import Button from "./Button";
+import { useScroll } from "@/hooks/useScroll";
+import { useTheme } from "@/hooks/useTheme";
+import { useActiveSection } from "@/hooks/useActiveSection";
+import Button from "@/components/Button";
 
 const navLinks = [
   { name: "Inicio", href: "#hero" },
@@ -12,10 +13,15 @@ const navLinks = [
   { name: "Contato", href: "#contact" },
 ];
 
+const sectionIds = ["hero", "about", "projects", "contact"];
+
 const Header = () => {
   const scrolled = useScroll();
   const { theme, toggle } = useTheme();
+  const activeSection = useActiveSection(sectionIds);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const isActive = (href: string) => href === `#${activeSection}`;
 
   return (
     <header
@@ -24,7 +30,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a
           className="text-xl font-semibold text-slate-900 dark:text-white"
-          href="#home"
+          href="#hero"
         >
           Sulivan Dev
         </a>
@@ -34,8 +40,13 @@ const Header = () => {
             {navLinks.map((link) => (
               <li key={link.name}>
                 <a
-                  className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors"
+                  className={`transition-colors ${
+                    isActive(link.href)
+                      ? "text-blue-600 dark:text-blue-400 font-medium"
+                      : "text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
+                  }`}
                   href={link.href}
+                  aria-current={isActive(link.href) ? "true" : undefined}
                 >
                   {link.name}
                 </a>
@@ -55,50 +66,55 @@ const Header = () => {
             />
           </div>
 
-          {theme === "light" ? (
-            <HiSun
-              className="w-6 h-6 text-slate-600 hover:text-slate-900 cursor-pointer transition-colors"
-              onClick={toggle}
-            />
-          ) : (
-            <HiMoon
-              className="w-6 h-6 text-slate-300 hover:text-white cursor-pointer transition-colors"
-              onClick={toggle}
-            />
-          )}
+          <button
+            onClick={toggle}
+            aria-label={
+              theme === "light" ? "Ativar tema escuro" : "Ativar tema claro"
+            }
+            className="cursor-pointer"
+          >
+            {theme === "light" ? (
+              <HiSun className="block w-6 h-6 text-slate-600 hover:text-slate-900 transition-colors" />
+            ) : (
+              <HiMoon className="block w-6 h-6 text-slate-300 hover:text-white transition-colors" />
+            )}
+          </button>
 
           <button
             className="md:hidden text-slate-600 dark:text-slate-300 cursor-pointer"
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={menuOpen}
           >
             {menuOpen ? (
-              <HiXMark className="w-6 h-6" />
+              <HiXMark className="block w-6 h-6" />
             ) : (
-              <HiBars3 className="w-6 h-6" />
+              <HiBars3 className="block w-6 h-6" />
             )}
           </button>
         </div>
       </div>
 
       {menuOpen && (
-        <nav className="md:hidden px-4 pt-4 pb-2">
-          <ul className="flex flex-col p-4 border border-slate-200 dark:border-slate-700 rounded-lg bg-slate-50 dark:bg-slate-800">
-            {navLinks.map((link, index) => (
+        <nav className="md:hidden absolute left-0 right-0 top-full px-4 pt-4 pb-2">
+          <ul className="flex flex-col p-4 border border-slate-200 dark:border-slate-700 rounded-lg bg-slate-50 dark:bg-slate-800 shadow-lg">
+            {navLinks.map((link) => (
               <li key={link.name}>
                 <a
                   className={`block py-2 px-3 rounded transition-colors ${
-                    index === 0
-                      ? "text-white bg-blue-400"
+                    isActive(link.href)
+                      ? "text-white bg-blue-500"
                       : "text-slate-700 hover:bg-slate-200 dark:text-slate-300 dark:hover:bg-slate-700"
                   }`}
                   href={link.href}
+                  aria-current={isActive(link.href) ? "true" : undefined}
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.name}
                 </a>
               </li>
             ))}
-            <div className="mt-4 px-3">
+            <li className="mt-4 px-3">
               <Button
                 text="Currículo"
                 variant="primary"
@@ -106,7 +122,7 @@ const Header = () => {
                 href="/curriculoDev.pdf"
                 target="_blank"
               />
-            </div>
+            </li>
           </ul>
         </nav>
       )}
