@@ -25,7 +25,11 @@ const Header = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 py-5 transition-all bg-white dark:bg-slate-900 ${scrolled ? "border-b border-slate-200 dark:border-slate-700" : ""}`}
+      className={`sticky top-0 z-50 py-5 border-b transition-colors bg-white dark:bg-slate-900 ${
+        scrolled
+          ? "border-slate-200 dark:border-slate-700"
+          : "border-transparent"
+      }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a
@@ -114,13 +118,14 @@ const Header = () => {
                 </a>
               </li>
             ))}
-            <li className="mt-4 px-3">
+            <li className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-600">
               <Button
                 text="Currículo"
                 variant="primary"
                 size="sm"
                 href="/curriculoDev.pdf"
                 target="_blank"
+                fullWidth
               />
             </li>
           </ul>
