@@ -6,9 +6,11 @@ type ButtonProps = {
   size?: "sm" | "md" | "lg";
   type?: "button" | "submit" | "reset";
   target?: "_blank" | "_self";
+  fullWidth?: boolean;
 };
 
-const baseClasses = "rounded-sm font-medium transition-colors cursor-pointer";
+const baseClasses =
+  "rounded-sm font-medium text-center whitespace-nowrap transition-colors cursor-pointer";
 
 const variantClasses = {
   primary:
@@ -33,8 +35,11 @@ const Button = ({
   size = "md",
   type = "button",
   target,
+  fullWidth = true,
 }: ButtonProps) => {
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]}`;
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${
+    fullWidth ? "block w-full" : "inline-block"
+  }`;
 
   if (href) {
     return (

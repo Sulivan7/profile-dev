@@ -12,7 +12,7 @@ const Hero = () => {
           Buscando estágio ou vaga júnior
         </span>
 
-        <h1 className="text-5xl font-bold leading-tight text-slate-900 dark:text-white">
+        <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-slate-900 dark:text-white">
           Desenvolvedor
           <br />
           <span className="text-slate-500 dark:text-slate-400">Front-end</span>
@@ -22,7 +22,7 @@ const Hero = () => {
           Construo interfaces com React, TypeScript e Next.js
         </p>
 
-        <div className="flex gap-4">
+        <div className="grid grid-cols-1 gap-4 w-full max-w-xs sm:flex sm:w-auto sm:max-w-none">
           <Button text="Ver Projetos" variant="primary" href="#projects" />
           <Button
             text="Entrar em Contato"
