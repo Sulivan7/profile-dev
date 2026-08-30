@@ -30,7 +30,7 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <TitleSection
           title="Vamos conversar?"
-          subtitle="Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades de colaboração."
+          subtitle="Busco estágio ou vaga júnior em front-end. Se você tem uma oportunidade ou quer trocar uma ideia, me chama."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">

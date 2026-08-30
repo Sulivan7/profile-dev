@@ -20,14 +20,16 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Link
-            to="/projetos"
-            className="inline-block px-6 py-3 text-base rounded-sm font-medium border border-slate-300 text-slate-700 hover:border-blue-600 hover:text-blue-600 dark:border-slate-600 dark:text-slate-300 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-colors"
-          >
-            Ver mais projetos
-          </Link>
-        </div>
+        {projects.length > previewCount && (
+          <div className="text-center mt-12">
+            <Link
+              to="/projetos"
+              className="inline-block px-6 py-3 text-base rounded-sm font-medium border border-slate-300 text-slate-700 hover:border-blue-600 hover:text-blue-600 dark:border-slate-600 dark:text-slate-300 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-colors"
+            >
+              Ver mais projetos
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
